@@ -1,36 +1,16 @@
-<?php
-include_once 'models/config.php';
-include_once 'models/photo.php';
-// подгружаем и активируем авто-загрузчик Twig-а
-require_once 'Twig/Autoloader.php';
-Twig_Autoloader::register();
-try {
-  // указывае где хранятся шаблоны
-  $loader = new Twig_Loader_Filesystem('templates');
-  
-  // инициализируем Twig
-  $twig = new Twig_Environment($loader);
-  
-  // подгружаем шаблон
-  $template = $twig->loadTemplate('index.tmpl');
-  
-  // передаём в шаблон переменные и значения
-  // выводим сформированное содержание
-  
-  $content = $template->render(array(
-    'title' => 'Каталог изображений',
-    'form' => $form,
-    'message' => $message,
-  ));
-  echo $content;
-  
-} catch (Exception $e) {
-  die ('ERROR: ' . $e->getMessage());
-}
-?>
+<?
+define ("DOCROOT", $_SERVER["DOCUMENT_ROOT"]."/");
+define ("MODELS_PATH", DOCROOT."models/");
 
+include_once MODELS_PATH."config.php";
+include_once MODELS_PATH."mysql.php";
 
+include_once AUTH_FNC_PATH."auth_fns.php";
+include_once MODELS_PATH."template_fns.php";
+include_once MODELS_PATH."uri_fns.php";
+include_once MODELS_PATH."cart/cart_fns.php";
+include_once MODELS_PATH."admincontent_fns.php";
+include_once MODELS_PATH."draw_items_fns.php";
 
-
-
-
+$request_string = $_SERVER["REQUEST_URI"];
+openURL($request_string);

@@ -1,30 +1,282 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
 
+html {
+    font-size: 10px;
+    font-family: 'Lobster', cursive;
+}
+
+p{
+    font-size: 1.7rem;
+    font-family: 'Vollkorn SC', serif;
+}
+strong, q{
+    font-family: 'Russo One', sans-serif;
+    color: rgb(12, 34, 31);
+}
 .wrapper {
-	margin: 0 auto;
-	
+    background-color: rgba(207, 244, 206, 0.71);
+    min-height: 100vh;
+    display: flex;
+    flex-flow: column;
+    margin: 0 auto;
 }
-.images {
-  display: flex;
-  margin-right: -30px;
-  
+
+a {
+    font-family: 'Russo One', sans-serif;
 }
-.s_img{
-	margin-right: 30px;
+
+main {
+    background-color: rgba(203, 205, 218, 0.7);
 }
-.add_foto {
-  text-align: center;
-  margin-top: 50px;
+
+.header {
+    padding-left: 0.5rem;
+    color: brown;
+    font-size: 2.5rem;
+    background-color: antiquewhite;
+    letter-spacing: 0.3rem;
 }
-.add_foto input {
-  width: 400px;
-  background: lightblue;
+
+nav .menu {
+    list-style: none;
+    padding: 0.5rem;
+    background-color: cadetblue;
 }
-.add_foto span {
-  font-size: 20px;
+
+nav .menu a {
+    line-height: 2rem;
+    display: block;
+    text-decoration: none;
+    color: whitesmoke;
+    border: 1px solid white;
+    padding: 0.5rem;
+    text-transform: uppercase;
 }
-.add_foto button {
-  background: lightgreen;
-  font-size: 20px;
-  border-radius: 10px;
-  box-shadow: 5px 5px 5px grey;
+.btn_next{
+    margin: 0 auto;
+    max-width: 100px;
+}
+.title {
+    font-size: 2.1rem;
+    padding-left: 0.5rem;
+    background-color: #c7c5e3;
+}
+.cart{
+    font-size: 2rem;
+    line-height: 3rem;
+    background-color: #46aad1;
+}
+.catalog {
+    margin: -15px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    padding: 0.5rem;
+}
+table{
+    font-size: 19px;
+    width: 100%;
+    text-align: center;
+}
+
+.catalog .item {
+    width: calc(100% - 3rem);
+    margin: 1.5rem;
+    display: flex;
+    align-self: stretch;
+    background: rgba(58, 135, 163, 0.51);
+    flex-direction: column;
+    border-radius: 0.5rem;
+}
+.title-category {
+    background-color: rgb(82, 155, 131);
+    font-size: 1.9rem;
+    color: #695126;
+    width: 100%;
+    padding-left: 1rem;
+    letter-spacing: 0.3rem;
+}
+.catalog .item .title_div {
+    flex-grow: 1;
+}
+
+.catalog .item .title_div .item_title {
+    font-family: 'Comfortaa', cursive;
+    color: #ffeaea;
+    font-size: 1.98rem;
+    padding: 0.6rem;
+}
+.item_img{
+    display: flex;
+    min-height: 250px;
+    min-width: 250px;
+    flex-grow: 1;
+}
+
+.catalog .item .item_image {
+    max-height: 50rem;
+    min-height: 10rem;
+    width: 100%;
+    min-width: 20rem;
+    padding: 0 -0.5rem;
+}
+
+.catalog .item .desc {
+    font-family: 'Comfortaa', cursive;
+    font-size: 2rem;
+    color: cornsilk;
+    margin-top: 1rem;
+    min-height: 10rem;
+    max-height: 17rem;
+    overflow: hidden;
+    padding: 0 1rem;
+}
+
+.catalog .item .item_price {
+    font-family: 'Comfortaa', cursive;
+    font-size: 2rem;
+    color: #ffd800;
+    margin: 2rem 0;
+    padding-left: 1rem;
+}
+
+ .btns {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    line-height: 3rem;
+    margin: 1rem -0.75rem;
+}
+
+.btn {
+    font-family: 'Russo One', sans-serif;
+    display: block;
+    padding: 0 1rem;
+    height: 3rem;
+    width: 45%;
+    margin: 0 0.7rem;
+    font-size: 1.3rem;
+    background: #fef0cc;
+    text-decoration: none;
+    color: #695126;
+    text-transform: uppercase;
+    text-align: center;
+}
+.incart{
+    background: rgb(255, 94, 0);
+}
+
+footer {
+    margin-top: auto;
+    padding: 0.5rem;
+    background-color: cadetblue;
+    font-size: 1.8rem;
+}
+
+@media (min-width: 576px) {
+    html {
+        font-size: 10.3px;
+    }
+    .wrapper {
+        width: 540px;
+        margin: 0 auto;
+    }
+    .logout {
+        margin-left: auto;
+    }
+    .catalog .item .title_div .item_title {
+
+        font-size: 1.48rem;
+    }
+    body {
+        background-image: url(https://st3.depositphotos.com/3720453/17762/i/1600/depositphotos_177622780-stock-photo-tasty-pizza-salami-set-sushi.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .btn:hover{
+        cursor: pointer;
+        background-color: #9dbc1a;
+    }
+
+}
+
+@media (min-width: 767px) {
+    html {
+        font-size: 10.5px;
+    }
+    .wrapper {
+        width: 720px;
+        margin: 0 auto;
+    }
+    nav .menu {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    a {
+        font-size: 0.67rem;
+    }
+    .catalog {
+        flex-flow: row wrap;
+    }
+    .catalog .item {
+        width: calc(50% - 3rem);
+    }
+    .catalog .item .desc {
+        font-size: 1.3rem;
+    }
+    .catalog .item .item_price {
+        font-size: 1.7rem;
+    }
+}
+
+@media (min-width: 991px) {
+    html {
+        font-size: 11px;
+    }
+    .wrapper {
+        width: 960px;
+        margin: 0 auto;
+    }
+    nav .menu {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    a {
+        font-size: 0.7rem;
+    }
+    .catalog {
+        flex-flow: row wrap;
+    }
+    .catalog .item {
+        width: calc(33% - 3rem);
+    }
+}
+
+@media (min-width: 1199px) {
+    html {
+        font-size: 12px;
+    }
+    .wrapper {
+        width: 1140px;
+        margin: 0 auto;
+    }
+    nav .menu {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    a {
+        font-size: 0.9rem;
+    }
+    .catalog {
+        flex-flow: row wrap;
+    }
+
+    .catalog .item {
+        width: calc(25% - 3rem);
+    }
 }

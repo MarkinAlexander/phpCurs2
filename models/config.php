@@ -1,14 +1,21 @@
-<?
-  CONST PHOTO = '.'. DIRECTORY_SEPARATOR .'img_max'. DIRECTORY_SEPARATOR ;
-  CONST PHOTO_SMALL = '.'. DIRECTORY_SEPARATOR .'img_min'. DIRECTORY_SEPARATOR ;
-  $message = '';
-  $server = "localhost";
-  $login = "root";
-  $pass = "";
-  $db = "images";
-
-  $connect = mysqli_connect($server,$login,$pass,$db);
-if (!$connect) {
-    die("Connection failed: " . mysqli_connect_error());
+<? 
+if(session_id() == '') {
+  session_start();
 }
-?>
+define ("AUTH_FNC_PATH", MODELS_PATH."auth/");
+define ("PAGE_PATH", DOCROOT."html/pages/");
+define ("TEMPLATE_PATH", DOCROOT."html/templates/");
+define ("CTRL_PATH", DOCROOT."controllers/");
+
+define ("ADMIN", 80);
+define ("MANAGER", 50);
+define ("CMANAGER", 40);
+define ("USER", 10);
+define ("GUEST", 0);
+
+define ("SOLT", 'hljkfadshjkladsf');
+define ("PHOTO", DOCROOT."img/full/");
+define ("PHOTO_SMALL", DOCROOT."img/min/");
+define("SERVERURL", 'http://'.$_SERVER['HTTP_HOST'].'/');
+
+
