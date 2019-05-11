@@ -1,0 +1,1 @@
+<?= drawGoods(10);//drawAllGoods();

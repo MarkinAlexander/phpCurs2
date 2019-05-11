@@ -1,0 +1,1 @@
+<h1 class="header">Ошибка 404 страница не найдена<br>Перейти на <a class="header" href="\" style="color: green">Главную</a></h1>
