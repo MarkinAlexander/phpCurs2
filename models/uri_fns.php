@@ -22,6 +22,7 @@ const _ROUTES = [
 	"/register"  			=> ["file" => "auth", 			"function" => "register"],
 	"/login"  				=> ["file" => "auth", 			"function" => "login"],
 	"/logout"  				=> ["file" => "auth", 			"function" => "logout"],
+	"/lk"					=> ["file" => "auth",			"function" => "lk"],
 	"/ajax/additem"			=> ["file" => "ajax", 			"function" => "add_item"],
 	"/ajax/delitem"			=> ["file" => "ajax", 			"function" => "del_item"],
 	"/ajax/drawcart"		=> ["file" => "ajax", 			"function" => "draw_cart"],

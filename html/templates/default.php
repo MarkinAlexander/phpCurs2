@@ -17,13 +17,13 @@
     <div class="wrapper">
         <nav class="navigation">
             <ul class="menu">
-                <li><a href="/">Главная</a></li>
-                <li><a href="/menu">Меню</a></li>
+                <li><a href="/">Главная</a></li>                
                 <li><a href="/cart">Корзина</a></li>
 				<? if(!isAuth()): ?>
                 <li><a href="/register">Регистрация</a></li>
                 <li><a href="/login">Авторизация</a></li>
-				<? else: ?> 
+                <? else: ?>
+                <li><a href="/lk">Личный кабинет</a></li> 
                 <? if(readRole()==ADMIN||readRole()==MANAGER) echo '<li><a href="/manager">Заказы</a></li>';?>
                 <? if(readRole()==ADMIN||readRole()==CMANAGER) echo'<li><a href="/content">Добавление товаров</a></li>';?>
                 <? if(readRole()==ADMIN) echo'<li><a href="/admin">Админка</a></li><li><a href="/category">Категории</a></li>';?>
@@ -35,7 +35,7 @@
                 <li class="logout" ><a href="/logout">Выйти</a></li>
 				<? endif; ?>
             </ul>
-            <? if(isAuth()):?><p>Добро пожаловать, <?=$_COOKIE["user_name"];?>!</p><? endif;?>
+            
         </nav>
         <div class="cart">
         <?if(isCart()):?>

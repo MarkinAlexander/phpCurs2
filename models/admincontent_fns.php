@@ -121,3 +121,7 @@ function getOrderInWork(){
         return drawOrder($arr);
     }
 }
+
+function getUserName(){
+    return $_COOKIE["user_name"];
+}
