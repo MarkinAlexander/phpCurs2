@@ -1,0 +1,15 @@
+ # Запускаем движок замены
+
+RewriteEngine on
+
+ # Если запрашиваемый объект не папка
+
+RewriteCond %{REQUEST_FILENAME} !-d
+
+ # Если запрашиваемый объект не файл 
+ 
+RewriteCond %{REQUEST_FILENAME} !-f
+
+ # Переводим все запросы на индексный файл
+
+RewriteRule .* index.php [L]
