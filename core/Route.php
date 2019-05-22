@@ -1,0 +1,23 @@
+<?php
+return [
+    "/"  					=> ["file" => "main", 			"action" => "index"],
+    "/404"  				=> ["file" => "main", 			"action" => "error404"],
+    "/about"  				=> ["file" => "main", 			"action" => "about"],
+    "/delivery_and_pay"		=> ["file" => "main", 			"action" => "delivery"],
+    "/reviews"		        => ["file" => "main", 			"action" => "rews"],
+    "/menu"		            => ["file" => "main", 			"action" => "menu"],
+    "/cart"  				=> ["file" => "cart", 			"action" => "cart"],
+    "/admin"  				=> ["file" => "admins", 		"action" => "admin_panel"],
+    "/manager"  			=> ["file" => "admins", 		"action" => "manager_panel"],
+    "/content"  			=> ["file" => "admins", 		"action" => "content_panel"],
+    "/category"  			=> ["file" => "admins", 		"action" => "category"],
+    "/register"  			=> ["file" => "auth", 			"action" => "register"],
+    "/login"  				=> ["file" => "auth", 			"action" => "login"],
+    "/logout"  				=> ["file" => "auth", 			"action" => "logout"],
+    "/lk"					=> ["file" => "auth",			"action" => "lk"],
+    "/ajax/additem"			=> ["file" => "ajax", 			"action" => "add_item"],
+    "/ajax/delitem"			=> ["file" => "ajax", 			"action" => "del_item"],
+    "/ajax/drawcart"		=> ["file" => "ajax", 			"action" => "draw_cart"],
+    "/ajax/closecart"		=> ["file" => "ajax", 			"action" => "cart_close"],
+    "/ajax/drawmoreitems"	=> ["file" => "ajax", 			"action" => "drawMoreItems"],
+    ];
